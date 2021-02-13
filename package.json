@@ -1,0 +1,26 @@
+{
+  "name": "someutilsbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kitaminka/SomeUtilsBot.git"
+  },
+  "author": "Kitam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kitaminka/SomeUtilsBot/issues"
+  },
+  "homepage": "https://github.com/Kitaminka/SomeUtilsBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
