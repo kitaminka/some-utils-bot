@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
-const PrefixSchema = new mongoose.Schema({
+const ServerSchema = new mongoose.Schema({
     prefix: {
         type: String,
         minlength: 1,
         maxlength: 5,
         required: true,
     },
-    guild: {
+    id: {
         type: String,
         required: true,
     }
 });
 
-module.exports = mongoose.model('Prefix', PrefixSchema);
+module.exports = mongoose.model('Server', ServerSchema);

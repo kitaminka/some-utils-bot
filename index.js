@@ -3,7 +3,11 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const client = new Discord.Client();
-client.Prefix = require('./models/prefix');
+client.models = {};
+client.models.Server = require('./models/server');
+client.config = require('./config.json');
+client.errorEmbed = require('./modules/errorEmbed');
+client.createGuild = require('./modules/createGuild');
 
 require('./handlers/commands')(client);
 require('./handlers/events')(client);
