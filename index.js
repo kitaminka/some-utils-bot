@@ -13,5 +13,6 @@ mongoose.connect(process.env.DATABASE, {
     useUnifiedTopology: true,
     retryWrites:  true,
     w: 'majority',
+    useFindAndModify: false,
 });
 client.login(process.env.TOKEN);
