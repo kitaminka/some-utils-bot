@@ -10,7 +10,7 @@ module.exports = async (client, message) => {
 
         let prefix;
         if (data) prefix = data.prefix;
-        else client.createGuild(client, message.guild);
+        else return client.createGuild(client, message.guild);
 
         if (!message.content.startsWith(prefix)) return;
 

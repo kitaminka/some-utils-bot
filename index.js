@@ -4,10 +4,9 @@ require('dotenv').config();
 
 const client = new Discord.Client();
 client.config = require('./config.json');
-client.errorEmbed = require('./modules/errorEmbed');
-client.createGuild = require('./modules/createGuild');
 
 require('./handlers/models')(client);
+require('./handlers/modules')(client);
 require('./handlers/commands')(client);
 require('./handlers/events')(client);
 
