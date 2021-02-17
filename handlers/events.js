@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = (client) => {
+module.exports = async (client) => {
     const eventDirs = fs.readdirSync('./events');
 
     for (const dir of eventDirs) {

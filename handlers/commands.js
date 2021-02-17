@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 
-module.exports = (client) => {
+module.exports = async (client) => {
     client.commandCategories = [];
     client.commands = new Discord.Collection();
 

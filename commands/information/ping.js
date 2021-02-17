@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'ping',
-    category: 'info',
+    category: 'information',
+    description: 'Display bot ping.',
     async execute(client, message, args) {
         const embed = new Discord.MessageEmbed()
             .setTitle(':ping_pong:Pong!')

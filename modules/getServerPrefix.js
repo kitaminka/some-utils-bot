@@ -5,10 +5,10 @@ module.exports = async (client, guild) => {
             id: guild.id,
         });
         if (!data) {
-            await new Server({
-                prefix: client.config.defaultPrefix,
-                id: guild.id,
-            }).save();
+            await client.modules.createGuild(client, guild);
+            return client.config.defaultPrefix;
+        } else {
+            return data.prefix;
         }
     } catch (err) {
         console.error(err);

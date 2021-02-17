@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = (client) => {
+module.exports = async (client) => {
     const modelFiles = fs.readdirSync('./models').filter(file => file.endsWith('.js'));
     client.models = {};
 
