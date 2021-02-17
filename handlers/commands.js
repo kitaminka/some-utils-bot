@@ -12,6 +12,7 @@ module.exports = async (client) => {
 
         for (const file of commandFiles) {
             const command = require(`../commands/${dir}/${file}`);
+            command.category = dir;
 
             if (!client.commandCategories.includes(command.category)) client.commandCategories.push(command.category);
 

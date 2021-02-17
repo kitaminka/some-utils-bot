@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'help',
-    category: 'information',
     description: 'Display information about commands.',
     async execute(client, message, args) {
         let embed = new Discord.MessageEmbed();

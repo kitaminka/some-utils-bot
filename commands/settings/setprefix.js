@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'setprefix',
-    category: 'settings',
     description: 'Set bot prefix.',
     async execute(client, message, args) {
         if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(await client.modules.errorEmbed(client, 'This command requires `ADMINISTRATOR` permission.'));
