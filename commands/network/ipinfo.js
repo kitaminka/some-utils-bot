@@ -9,7 +9,7 @@ module.exports = {
         let embed, ipInfo;
 
         try {
-            ipInfo = await fetch(`http://ip-api.com/json/${args[0]}`).then( res => res.json());
+            ipInfo = await fetch(`http://ip-api.com/json/${args[0]}`).then((res) => res.json());
         } catch (err) {
             message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
             return console.error(err);
