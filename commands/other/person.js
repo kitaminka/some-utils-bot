@@ -8,7 +8,9 @@ module.exports = {
         let data;
 
         try {
-            data = await fetch(`https://randomuser.me/api/`).then((res) => res.json()).then((body) => {
+            data = await fetch(`https://randomuser.me/api/`, {
+                method: 'GET',
+            }).then((res) => res.json()).then((body) => {
                 return body.results[0];
             });
         } catch (err) {
