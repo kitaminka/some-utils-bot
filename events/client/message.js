@@ -7,10 +7,18 @@ module.exports = async (client, message) => {
 
     if (!client.commands.has(command)) return;
 
+    const commandFile =client.commands.get(command)
+
+    if (commandFile.permissions) {
+        if (!message.member.hasPermission(commandFile.permissions)) {
+            return message.channel.send(await client.modules.errorEmbed(client, `This command requires \`${commandFile.permissions}\` permission.`));
+        }
+    }
+
     try {
         client.commands.get(command).execute(client, message, args);
     } catch (err) {
-        message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
+        await message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
         return console.error(err);
     }
 }
