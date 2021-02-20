@@ -8,14 +8,9 @@ module.exports = {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No IP address specified.'));
         let embed, ipInfo;
 
-        try {
-            ipInfo = await fetch(`http://ip-api.com/json/${args[0]}`, {
-                method: 'GET',
-            }).then((res) => res.json());
-        } catch (err) {
-            message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
-            return console.error(err);
-        }
+        ipInfo = await fetch(`http://ip-api.com/json/${args[0]}`, {
+            method: 'GET',
+        }).then((res) => res.json());
 
         if (ipInfo.status === 'success') {
             embed = new Discord.MessageEmbed()

@@ -10,6 +10,7 @@ module.exports = async (client, message) => {
     try {
         client.commands.get(command).execute(client, message, args);
     } catch (err) {
-        console.error(err);
+        message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
+        return console.error(err);
     }
 }

@@ -12,15 +12,10 @@ module.exports = {
 
         let data;
 
-        try {
-            data = await fetch(`https://goolnk.com/api/v1/shorten`, {
-                method: 'POST',
-                body: params,
-            }).then((res) => res.json());
-        } catch (err) {
-            message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
-            return console.error(err);
-        }
+        data = await fetch(`https://goolnk.com/api/v1/shorten`, {
+            method: 'POST',
+            body: params,
+        }).then((res) => res.json());
 
         if (data.error) return message.channel.send(await client.modules.errorEmbed(client, 'Entered incorrect URL.'));
 

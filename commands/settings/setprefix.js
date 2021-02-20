@@ -10,23 +10,18 @@ module.exports = {
         if (args[0] === message.prefix) return message.channel.send(await client.modules.errorEmbed(client, 'This prefix has already set.'));
 
         const Server = client.models.Server;
-        try {
-            await Server.findOneAndUpdate({
-                id: message.guild.id,
-            }, {
-                $set: {
-                    prefix: args[0],
-                }
-            });
-            const embed = new Discord.MessageEmbed()
-                .setTitle(':white_check_mark:Prefix changed')
-                .setColor(client.config.embedColor)
-                .setDescription(`Prefix changed to \`${args[0]}\``)
-                .setTimestamp();
-            return message.channel.send(embed);
-        } catch (err) {
-            message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
-            return console.error(err);
-        }
+        await Server.findOneAndUpdate({
+            id: message.guild.id,
+        }, {
+            $set: {
+                prefix: args[0],
+            }
+        });
+        const embed = new Discord.MessageEmbed()
+            .setTitle(':white_check_mark:Prefix changed')
+            .setColor(client.config.embedColor)
+            .setDescription(`Prefix changed to \`${args[0]}\``)
+            .setTimestamp();
+        return message.channel.send(embed);
     }
 }
