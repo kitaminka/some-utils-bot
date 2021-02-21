@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'help',
     description: 'Display information about commands.',
-    async execute(client, message, args) {
+    async execute(client, message) {
         let embed = new Discord.MessageEmbed();
         if (!args[0]) {
             embed.setTitle('Command categories')

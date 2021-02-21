@@ -4,19 +4,14 @@ const fetch = require('node-fetch');
 module.exports = {
     name: 'person',
     description: 'Display random person data.',
-    async execute(client, message, args) {
+    async execute(client, message) {
         let data;
 
-        try {
-            data = await fetch(`https://randomuser.me/api/`, {
-                method: 'GET',
-            }).then((res) => res.json()).then((body) => {
-                return body.results[0];
-            });
-        } catch (err) {
-            message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
-            return console.error(err);
-        }
+        data = await fetch(`https://randomuser.me/api/`, {
+            method: 'GET',
+        }).then((res) => res.json()).then((body) => {
+            return body.results[0];
+        });
 
         const embed = new Discord.MessageEmbed()
             .setTitle('Random person data')
