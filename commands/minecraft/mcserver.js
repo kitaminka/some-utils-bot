@@ -14,7 +14,7 @@ module.exports = {
         if (!serverInfo.online) return message.channel.send(await client.modules.errorEmbed(client, 'Failed to get Minecraft server information. The wrong IP address may be entered or the server is down.'));
 
         const embed = new Discord.MessageEmbed()
-            .setTitle(`Minecraft server information ${args[0]}`)
+            .setTitle(`<:grass_block:814059401619046430>Minecraft server ${args[0]}`)
             .setColor(client.config.embedColor)
             .setThumbnail(serverInfo.favicon)
             .addField('Players', `${serverInfo.players.online}/${serverInfo.players.max}`)

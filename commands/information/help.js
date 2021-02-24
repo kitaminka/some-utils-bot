@@ -6,7 +6,7 @@ module.exports = {
     async execute(client, message, args) {
         let embed = new Discord.MessageEmbed();
         if (!args[0]) {
-            embed.setTitle('Command categories')
+            embed.setTitle(':dividers:Command categories')
                 .setDescription('To know more about category or command, use `!help [category or command name]`.')
                 .setColor(client.config.embedColor)
                 .setTimestamp();
@@ -22,7 +22,7 @@ module.exports = {
         } else {
             args[0] = args[0].toLowerCase();
             if (client.commandCategories.includes(args[0])) {
-                embed.setTitle(`${args[0].charAt(0).toUpperCase() + args[0].slice(1)} commands`)
+                embed.setTitle(`:dividers:${args[0].charAt(0).toUpperCase() + args[0].slice(1)} commands`)
                     .setDescription('To know more about category or command, use `!help [category or command name]`.')
                     .setColor(client.config.embedColor)
                     .setTimestamp();
@@ -38,7 +38,7 @@ module.exports = {
                 }
             } else if (client.commands.has(args[0])) {
                 const commandInfo = client.commands.get(args[0])
-                embed.setTitle(`Command ${message.prefix + args[0]}`)
+                embed.setTitle(`:dividers:Command ${message.prefix + args[0]}`)
                     .setDescription('To know more about category or command, use `!help [category or command name]`.')
                     .setColor(client.config.embedColor)
                     .setTimestamp()

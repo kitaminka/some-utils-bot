@@ -20,7 +20,7 @@ module.exports = {
         if (data.error) return message.channel.send(await client.modules.errorEmbed(client, 'Entered incorrect URL.'));
 
         const embed = new Discord.MessageEmbed()
-            .setTitle('URL shortener')
+            .setTitle(':link:URL shortener')
             .setColor(client.config.embedColor)
             .addField('Initial url', args[0])
             .addField('Shorten url', data.result_url)

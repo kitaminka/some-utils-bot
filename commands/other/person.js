@@ -14,7 +14,7 @@ module.exports = {
         });
 
         const embed = new Discord.MessageEmbed()
-            .setTitle('Random person data')
+            .setTitle(':bust_in_silhouette:Random person data')
             .setThumbnail(data.picture.large)
             .setColor(client.config.embedColor)
             .addField('Gender', data.gender, true)
