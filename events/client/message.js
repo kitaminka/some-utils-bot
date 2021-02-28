@@ -7,9 +7,9 @@ module.exports = async (client, message) => {
 
     if (!client.commands.has(command)) return;
 
-    const commandFile =client.commands.get(command)
+    const commandFile = client.commands.get(command);
 
-    if (commandFile.permissions) {
+    if (commandFile.permission) {
         if (!message.member.hasPermission(commandFile.permission)) {
             return message.channel.send(await client.modules.errorEmbed(client, `This command requires \`${commandFile.permission}\` permission.`));
         }
