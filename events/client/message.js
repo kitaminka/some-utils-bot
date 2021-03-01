@@ -1,6 +1,6 @@
 module.exports = async (client, message) => {
     message.prefix = await client.modules.getServerPrefix(client, message.guild);
-    if (message.author.bot && message.type === 'dm' && !message.content.startsWith(message.prefix)) return;
+    if (message.author.bot || message.type === 'dm' || !message.content.startsWith(message.prefix)) return;
 
     const args = message.content.slice(message.prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
@@ -9,10 +9,8 @@ module.exports = async (client, message) => {
 
     const commandFile = client.commands.get(command);
 
-    if (commandFile.permission) {
-        if (!message.member.hasPermission(commandFile.permission)) {
-            return message.channel.send(await client.modules.errorEmbed(client, `This command requires \`${commandFile.permission}\` permission.`));
-        }
+    if (commandFile.permission && !message.member.hasPermission(commandFile.permission)) {
+        return message.channel.send(await client.modules.errorEmbed(client, `This command requires \`${commandFile.permission}\` permission.`));
     }
 
     try {
