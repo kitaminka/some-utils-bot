@@ -13,19 +13,20 @@ module.exports = {
 
         if (!serverInfo.online) return message.channel.send(await client.modules.errorEmbed(client, 'Failed to get Minecraft server information. The wrong IP address may be entered or the server is down.'));
 
+        let description = '';
+        if (serverInfo.description.extra) for (const extra of serverInfo.description.extra) description += extra.text;
+        if (serverInfo.description.text) description = serverInfo.description.text;
+        else description = serverInfo.description;
+
         const embed = new Discord.MessageEmbed()
             .setTitle(`<:grass_block:814059401619046430>Minecraft server ${args[0]}`)
             .setColor(client.config.embedColor)
+            .setDescription(description.replace(/§./g, ''))
             .setThumbnail(serverInfo.favicon)
             .addField('Players', `${serverInfo.players.online}/${serverInfo.players.max}`)
-            .addField('Version', serverInfo.version.name)
+            .addField('Version', serverInfo.version.name.replace(/§./g, ''))
             .setTimestamp();
 
-        let description = '';
-        if (serverInfo.description.extra) for (const extra of serverInfo.description.extra) description += extra.text;
-        else description = serverInfo.description;
-
-        embed.setDescription(description);
         return message.channel.send(embed);
     }
 }
