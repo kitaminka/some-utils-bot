@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Kitaminka/SomeUtilsBot#readme",
   "dependencies": {
-    "discord.js": "^12.5.1",
+    "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
     "images-scraper": "^6.0.1",
     "mongoose": "^5.12.3",
