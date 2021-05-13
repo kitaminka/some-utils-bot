@@ -4,10 +4,19 @@ module.exports = {
     name: 'info',
     description: 'Display bot information.',
     async execute(client, message) {
+        let uptime = (client.uptime / 1000);
+        let days = Math.floor(uptime / 86400);
+        uptime %= 86400;
+        let hours = Math.floor(uptime / 3600);
+        uptime %= 3600;
+        let minutes = Math.floor(uptime / 60);
+        let seconds = Math.floor(uptime % 60);
         const embed = new Discord.MessageEmbed()
             .setTitle(':information_source:SomeUtilsBot information')
             .setColor(client.config.embedColor)
             .setDescription(`It is bot with a set of utilities.\nCurrent server bot prefix: \`${message.prefix}\`. Use \`${message.prefix}help\` to see all bot command categories.`)
+            .addField('Uptime', `${days}d ${hours}h ${minutes}m ${seconds}s`)
+            .addField('Server count', client.guilds.cache.size)
             .addField('Links', '[Add bot to server](https://discord.com/oauth2/authorize?client_id=810576719903719424&scope=bot&permissions=1849163457)\n[Support server](https://discord.gg/fdW283BpTY)\n[GitHub repository](https://github.com/Kitaminka/SomeUtilsBot)')
             .setTimestamp();
 
