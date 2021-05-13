@@ -5,11 +5,11 @@ const ServerSchema = new mongoose.Schema({
         type: String,
         minlength: 1,
         maxlength: 5,
-        required: true,
+        required: true
     },
     id: {
         type: String,
-        required: true,
+        required: true
     }
 });
 

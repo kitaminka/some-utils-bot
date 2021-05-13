@@ -10,9 +10,7 @@ module.exports = {
         const params = new URLSearchParams();
         params.append('url', args[0]);
 
-        let data;
-
-        data = await fetch(`https://goolnk.com/api/v1/shorten`, {
+        let data = await fetch(`https://goolnk.com/api/v1/shorten`, {
             method: 'POST',
             body: params,
         }).then((res) => res.json());
