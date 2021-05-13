@@ -1,5 +1,6 @@
 module.exports = async (client, message) => {
     message.prefix = await client.modules.getServerPrefix(client, message.guild);
+    if (message.content === `<@!${client.user.id}>`) message.content = `${message.prefix}info`;
     if (message.author.bot || message.type === 'dm' || !message.content.startsWith(message.prefix)) return;
 
     const args = message.content.slice(message.prefix.length).trim().split(/ +/);
