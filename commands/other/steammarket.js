@@ -6,7 +6,6 @@ module.exports = {
     description: 'Display information about item from Steam Community Market',
     permission: 'ADMINISTRATOR',
     async execute(client, message, args) {
-        // TODO Add catch for requests
         try {
             if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No Steam Community Market item name specified.'));
             const itemInfo = await fetch(`https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&norender=1&count=1&query=${args.join(' ')}`, {
