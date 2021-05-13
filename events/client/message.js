@@ -14,9 +14,9 @@ module.exports = async (client, message) => {
     }
 
     try {
-        client.commands.get(command).execute(client, message, args);
+        await client.commands.get(command).execute(client, message, args);
     } catch (err) {
-        await message.channel.send(await client.modules.errorEmbed(client, 'An error has occurred.'));
+        await message.channel.send(await client.modules.errorEmbed(client, `An error has occurred: **${err.message}**`));
         return console.error(err);
     }
 }
