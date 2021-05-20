@@ -12,7 +12,7 @@ module.exports = {
         let minutes = Math.floor(uptime / 60);
         let seconds = Math.floor(uptime % 60);
         const embed = new Discord.MessageEmbed()
-            .setTitle(':information_source:SomeUtilsBot information')
+            .setTitle(':information_source: SomeUtilsBot information')
             .setColor(client.config.embedColor)
             .setDescription(`It is bot with a set of utilities.\nCurrent server bot prefix: \`${message.prefix}\`. Use \`${message.prefix}help\` to see all bot command categories.`)
             .addField('Uptime', `${days}d ${hours}h ${minutes}m ${seconds}s`)

@@ -17,11 +17,12 @@ module.exports = {
             if (!itemInfo.success) return message.channel.send(await client.modules.errorEmbed(client, 'Failed to get Community Market item information.'));
             if (!itemInfo.results[0]) return message.channel.send(await client.modules.errorEmbed(client, 'Failed to find Community Market item.'));
             const embed = new Discord.MessageEmbed()
-                .setTitle(itemInfo.results[0].name)
+                .setTitle(`:gun: ${itemInfo.results[0].name}`)
                 .setAuthor(itemInfo.results[0].app_name, itemInfo.results[0].app_icon)
                 .setColor(client.config.embedColor)
                 .setThumbnail(`https://community.cloudflare.steamstatic.com/economy/image/${itemInfo.results[0].asset_description.icon_url}`)
-                .addField('Price', itemInfo.results[0].sell_price_text);
+                .addField('Price', itemInfo.results[0].sell_price_text)
+                .setTimestamp();
             if (itemInfo.results[0].asset_description.type !== '') embed.addField('Type', itemInfo.results[0].asset_description.type);
             return message.channel.send(embed);
         } catch {

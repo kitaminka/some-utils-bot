@@ -15,7 +15,7 @@ module.exports = {
         }).then(res => res.text());
 
         const embed = new Discord.MessageEmbed()
-            .setTitle(`Random number from ${args[0]} to ${args[1]}`)
+            .setTitle(`:game_die: Random number from ${args[0]} to ${args[1]}`)
             .setColor(client.config.embedColor)
             .addField('Result', number)
             .setTimestamp();

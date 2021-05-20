@@ -38,7 +38,7 @@ module.exports = {
                 }
             } else if (client.commands.has(args[0])) {
                 const commandInfo = client.commands.get(args[0])
-                embed.setTitle(`:dividers:Command ${message.prefix + args[0]}`)
+                embed.setTitle(`:dividers: Command ${message.prefix + args[0]}`)
                     .setDescription(`To know more about category or command, use \`${message.prefix}help [category or command name]\`.`)
                     .setColor(client.config.embedColor)
                     .setTimestamp()
