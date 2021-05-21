@@ -6,9 +6,10 @@ module.exports = {
     description: 'Return random number.',
     async execute(client, message, args) {
         if (!args[0] || !args[1]) return message.channel.send(await client.modules.errorEmbed(client, 'The smallest or biggest number is not specified.'));
-        if (isNaN(args[0]) || isNaN(args[1]) || args[0].includes('.') || args[1].includes('.')) return message.channel.send(await client.modules.errorEmbed(client, 'The smallest or biggest number must be an integer.'));
+        if (isNaN(args[0]) || isNaN(args[1]) || args[0].includes('.') || args[1].includes('.')) return message.channel.send(await client.modules.errorEmbed(client, 'The smallest and biggest number must be an integer.'));
         if (args[0] === args[1]) return message.channel.send(await client.modules.errorEmbed(client, 'The first number cannot be equal to the second number.'));
         if (args[0] > args[1]) return message.channel.send(await client.modules.errorEmbed(client, 'The first number cannot be smaller than the second number.'));
+        if (args[0] > 1000000000 || args[0] < -1000000000 || args[1] > 1000000000 || args[1] < -1000000000) return message.channel.send(await client.modules.errorEmbed(client, 'The smallest and biggest number must be from -1000000000 to 1000000000.'));
 
         const number = await fetch(`https://www.random.org/integers/?num=1&min=${args[0]}&max=${args[1]}&base=10&col=1&format=plain&rnd=new`, {
             method: 'GET'
