@@ -4,7 +4,6 @@ const fetch = require('node-fetch');
 module.exports = {
     name: 'steammarket',
     description: 'Display information about item from Steam Community Market',
-    permission: 'ADMINISTRATOR',
     async execute(client, message, args) {
         try {
             if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No Steam Community Market item name specified.'));
