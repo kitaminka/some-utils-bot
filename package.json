@@ -20,7 +20,6 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
-    "images-scraper": "^6.0.1",
     "mongoose": "^5.12.3",
     "node-fetch": "^2.6.1"
   },
