@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'random',
     description: 'Return random number.',
     async execute(client, message, args) {
         if (!args[0] || !args[1]) return message.channel.send(await client.modules.errorEmbed(client, 'The smallest or biggest number is not specified.'));

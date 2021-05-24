@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'solve',
     description: 'Solve math example.',
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'The math example is not specified.'));

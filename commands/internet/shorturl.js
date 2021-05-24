@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'shorturl',
     description: 'Return shorten URL.',
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No URL specified.'));

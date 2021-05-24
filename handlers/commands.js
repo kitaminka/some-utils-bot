@@ -12,11 +12,12 @@ module.exports = async (client) => {
 
         for (const file of commandFiles) {
             const command = require(`../commands/${dir}/${file}`);
+            const commandName = file.split('.')[0];
             command.category = dir;
 
             if (!client.commandCategories.includes(command.category)) client.commandCategories.push(command.category);
 
-            client.commands.set(command.name, command);
+            client.commands.set(commandName, command);
         }
     }
 }

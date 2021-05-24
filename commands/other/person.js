@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'person',
     description: 'Display random person data.',
     async execute(client, message) {
         let data;
