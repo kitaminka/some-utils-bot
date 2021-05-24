@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'steammarket',
     description: 'Display information about item from Steam Community Market',
     async execute(client, message, args) {
         try {

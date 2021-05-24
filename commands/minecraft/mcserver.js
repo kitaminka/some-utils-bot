@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'mcserver',
     description: 'Display information about Minecraft server',
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No Minecraft server IP address specified.'));

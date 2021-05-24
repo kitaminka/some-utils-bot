@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'embed',
     description: 'Send embed message.',
     permission: 'ADMINISTRATOR',
     async execute(client, message, args) {

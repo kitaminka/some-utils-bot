@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'setprefix',
     description: 'Set bot prefix.',
     permission: 'ADMINISTRATOR',
     async execute(client, message, args) {

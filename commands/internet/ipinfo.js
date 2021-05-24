@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'ipinfo',
     description: 'Display information about IP address.',
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No IP address specified.'));

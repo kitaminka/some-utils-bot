@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'info',
     description: 'Display bot information.',
     async execute(client, message) {
         let uptime = (client.uptime / 1000);

@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fetch = require('node-fetch');
 
 module.exports = {
-    name: 'github',
     description: 'Display information about GitHub user.',
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No GitHub username specified.'));
