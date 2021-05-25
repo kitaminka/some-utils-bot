@@ -5,7 +5,7 @@ module.exports = {
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'The math example is not specified.'));
         const example = args.join(' ');
-        if (/[a-z]/.test(example) || /[,'"`$@#/?]/.test(example)) return message.channel.send(await client.modules.errorEmbed(client, 'The math example is invalid.'));
+        if (/[a-z]/.test(example) || /[,'"`$@#?]/.test(example)) return message.channel.send(await client.modules.errorEmbed(client, 'The math example is invalid.'));
         if (example.length > 50) return message.channel.send(await client.modules.errorEmbed(client, 'The math example must be shorter than 50 symbols.'));
         try {
             const result = eval(example);
