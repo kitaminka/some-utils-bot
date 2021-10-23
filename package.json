@@ -19,9 +19,9 @@
   "homepage": "https://github.com/Kitaminka/SomeUtilsBot#readme",
   "dependencies": {
     "discord-together": "^1.1.14",
-    "discord.js": "^12.5.3",
+    "discord.js": "12.5.3",
     "dotenv": "^8.2.0",
-    "mongoose": "^5.12.3",
+    "mongoose": "^6.0.12",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
