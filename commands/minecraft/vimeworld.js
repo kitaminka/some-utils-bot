@@ -28,7 +28,7 @@ module.exports = {
         let seconds = Math.floor(uptime % 60);
 
         const embed = new Discord.MessageEmbed()
-            .setTitle(`<:vimeworld:846672176148643850>VimeWorld player ${stats.user.username}`)
+            .setTitle(`:video_game: VimeWorld player ${stats.user.username}`)
             .setColor(client.config.embedColor)
             .addField('Level', stats.user.level)
             .addField('Rank', stats.user.rank)

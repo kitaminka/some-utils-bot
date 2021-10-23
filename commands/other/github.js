@@ -13,7 +13,7 @@ module.exports = {
 
         if (profile.message) return message.channel.send(await client.modules.errorEmbed(client, 'GitHub user not found.'));
 
-        embed.setTitle(`<:github:814070714252263424> GitHub ${profile.login}`)
+        embed.setTitle(`:technologist: GitHub ${profile.login}`)
             .setURL(profile.html_url)
             .setColor(client.config.embedColor)
             .setThumbnail(profile.avatar_url)

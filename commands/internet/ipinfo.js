@@ -13,7 +13,7 @@ module.exports = {
 
         if (ipInfo.status === 'success') {
             embed = new Discord.MessageEmbed()
-                .setTitle(`<:ip_address:814069539645685820> IP address ${ipInfo.query}`)
+                .setTitle(`:globe_with_meridians: IP address ${ipInfo.query}`)
                 .setColor(client.config.embedColor)
                 .addField('Country', ipInfo.country)
                 .addField('City', ipInfo.city)

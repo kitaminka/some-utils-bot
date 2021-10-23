@@ -18,7 +18,7 @@ module.exports = {
         else description = serverInfo.description;
 
         const embed = new Discord.MessageEmbed()
-            .setTitle(`<:grass_block:814059401619046430> Minecraft server ${args[0]}`)
+            .setTitle(`:pick: Minecraft server ${args[0]}`)
             .setColor(client.config.embedColor)
             .setDescription(description.replace(/§./g, ''))
             .setThumbnail(serverInfo.favicon)
