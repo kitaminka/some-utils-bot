@@ -13,7 +13,7 @@ require('./handlers/modules')(client);
 require('./handlers/commands')(client);
 require('./handlers/events')(client);
 
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     retryWrites:  true

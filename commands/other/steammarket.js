@@ -7,10 +7,7 @@ module.exports = {
         try {
             if (!args[0]) return message.channel.send(await client.modules.errorEmbed(client, 'No Steam Community Market item name specified.'));
             const itemInfo = await fetch(`https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&norender=1&count=1&query=${args.join(' ')}`, {
-                method: 'GET',
-                headers: {
-                    cookie: process.env.STEAM_LOGIN
-                }
+                method: 'GET'
             }).then(res => res.json());
             if (!itemInfo.success) return message.channel.send(await client.modules.errorEmbed(client, 'Failed to get Community Market item information.'));
             if (!itemInfo.results[0]) return message.channel.send(await client.modules.errorEmbed(client, 'Failed to find Community Market item.'));
