@@ -1,5 +1,5 @@
 # SomeUtilsBot
-Discord bot with a set of different utilities.
+**Discord bot** with a set of different utilities.
 ___
 ### Installation and launching
 - Clone repository to your computer.
@@ -7,7 +7,7 @@ ___
 ```bash
 npm install
 ```
-- Create **.env** file and put your [**Discord bot token**](#discord-bot-creation) and [**MongoDB URL**]() in this file. Example of **.env** file you can see in the file **.env.example**.
+- Create **.env** file and put your [**Discord bot token**](#discord-bot-creation) and [**MongoDB URL**](#mongodb-free-hosting) in this file. Example of **.env** file you can see in the file **.env.example**.
 - To start the program, use the following command:
 ```bash
 npm start
