@@ -19,7 +19,7 @@ ___
 ![Screenshot](https://i.imgur.com/wpxEvSK.png)
 - Go to the **Bot** tab, create a **bot** and copy a **token**.
 
-![Screenshot](https://i.imgur.com/r1KuKyL.png)
+![Screenshot](https://i.imgur.com/aIuxuhW.png)
 ___
 ### MongoDB free hosting
 As a free hosting for the **MongoDB**, you can use a [**MongoDB Atlas**](https://cloud.mongodb.com) free cluster.
