@@ -2,7 +2,7 @@
 **Discord bot** with a set of different utilities.
 ___
 ### Installation and launching
-- Clone repository:
+- Clone the repository:
 ```bash
 git clone https://github.com/Kitaminka/SomeUtilsBot.git
 ```
