@@ -1,7 +1,7 @@
 {
   "name": "someutilsbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord bot with a set of different utilities",
   "main": "index.js",
   "scripts": {
     "start": "node .",
