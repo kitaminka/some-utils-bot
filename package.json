@@ -1,5 +1,5 @@
 {
-  "name": "someutilsbot",
+  "name": "some-utils-bot",
   "version": "1.0.0",
   "description": "Discord bot with a set of different utilities",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Kitaminka/SomeUtilsBot.git"
   },
-  "author": "Kitaminka",
+  "author": "kitaminka",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Kitaminka/SomeUtilsBot/issues"

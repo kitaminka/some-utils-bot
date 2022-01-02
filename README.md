@@ -1,4 +1,4 @@
-# SomeUtilsBot
+# some-utils-bot
 **Discord bot** with a set of different utilities.
 ___
 ### Installation and launching
