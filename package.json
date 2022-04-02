@@ -17,6 +17,9 @@
     "url": "https://github.com/kitaminka/some-utils-bot/issues"
   },
   "homepage": "https://github.com/Kitaminka/some-utils-bot#readme",
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "discord.js": "12.5.3",
     "dotenv": "8.6.0",
@@ -25,8 +28,5 @@
   },
   "devDependencies": {
     "nodemon": "2.0.15"
-  },
-  "engines": {
-    "node": "16.x"
   }
 }

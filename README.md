@@ -1,7 +1,7 @@
 # some-utils-bot
 **Discord bot** with a set of different utilities.
 ___
-### Installation and launching
+### Installation
 - Clone the repository:
 ```bash
 git clone https://github.com/Kitaminka/SomeUtilsBot.git
@@ -10,11 +10,16 @@ git clone https://github.com/Kitaminka/SomeUtilsBot.git
 ```bash
 npm install
 ```
-- Create **.env** file and put your [**Discord bot token**](#discord-bot-creation) and [**MongoDB URL**](#mongodb-free-hosting) in this file. Example of **.env** file you can see in the file **.env.example**.
+- Create **.env** file and put your [**Discord bot token**](#discord-bot-creation) and **MongoDB URL** in this file. Example of **.env** file you can see in the file **.env.example**.
 - Start the program:
 ```bash
 npm start
 ```
+___
+### Features
+- Event and command handler
+- Unique command prefix for each server
+- MongoDB usage
 ___
 ### Discord bot creation
 - Go to the [**Discord Developer Portal**](https://discord.com/developers/applications) and create an **application**.
@@ -24,8 +29,7 @@ ___
 
 ![Screenshot](https://i.imgur.com/aIuxuhW.png)
 ___
-### MongoDB free hosting
-As a free hosting for the **MongoDB**, you can use a [**MongoDB Atlas**](https://cloud.mongodb.com) free cluster.
-
-![Screenshot](https://i.imgur.com/KmoA8Gc.png)
+### Screenshots
+![Screenshot](https://i.imgur.com/uUpw4jx.png)
+![Screenshot](https://i.imgur.com/E9LV0bF.png)
 ___
