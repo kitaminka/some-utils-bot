@@ -18,7 +18,7 @@ module.exports = {
             .addField('Server count', client.guilds.cache.size)
             .addField('Node.js version', process.version)
             .addField('WebSocket ping', client.ws.ping)
-            .addField('Links', '[GitHub repository](https://github.com/Kitaminka/SomeUtilsBot)')
+            .addField('Links', '[GitHub repository](https://github.com/kitaminka/some-utils-bot)')
             .setTimestamp();
 
         return message.channel.send(embed);

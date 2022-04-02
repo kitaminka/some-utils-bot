@@ -9,22 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kitaminka/SomeUtilsBot.git"
+    "url": "git+https://github.com/Kitaminka/some-utils-bot.git"
   },
   "author": "kitaminka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kitaminka/SomeUtilsBot/issues"
+    "url": "https://github.com/kitaminka/some-utils-bot/issues"
   },
-  "homepage": "https://github.com/Kitaminka/SomeUtilsBot#readme",
+  "homepage": "https://github.com/Kitaminka/some-utils-bot#readme",
   "dependencies": {
-    "discord-together": "^1.1.14",
     "discord.js": "12.5.3",
-    "dotenv": "^8.2.0",
-    "mongoose": "^6.0.12",
-    "node-fetch": "^2.6.1"
+    "dotenv": "8.6.0",
+    "mongoose": "6.0.12",
+    "node-fetch": "2.6.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "2.0.15"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
