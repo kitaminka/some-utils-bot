@@ -4,7 +4,7 @@ ___
 ### Installation
 - Clone the repository:
 ```bash
-git clone https://github.com/Kitaminka/SomeUtilsBot.git
+git clone https://github.com/kitaminka/some-utils-bot.git
 ```
 - Install dependencies:
 ```bash
