@@ -7,18 +7,10 @@
     "start": "node .",
     "dev": "nodemon ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kitaminka/some-utils-bot.git"
-  },
   "author": "kitaminka",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kitaminka/some-utils-bot/issues"
-  },
-  "homepage": "https://github.com/Kitaminka/some-utils-bot#readme",
   "engines": {
-    "node": "16.x"
+    "node": ">=16"
   },
   "dependencies": {
     "discord.js": "12.5.3",
@@ -27,6 +19,6 @@
     "node-fetch": "2.6.7"
   },
   "devDependencies": {
-    "nodemon": "2.0.15"
+    "nodemon": "2.0.19"
   }
 }
